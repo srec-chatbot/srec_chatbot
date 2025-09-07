@@ -1,0 +1,131 @@
+Project Title: SREC Connect (College Social & Event Platform)
+
+Project Type: Full-stack Web Application (Frontend + Backend + Database + Realtime Notifications)
+
+📌 Project Overview
+
+Build a college-exclusive social platform for Sri Ramakrishna Engineering College (SREC) students.
+The platform allows:
+
+Registration with @srec.ac.in email only.
+
+Role selection (Student, Faculty, Organizer, etc.).
+
+Club selection (students can follow multiple clubs).
+
+Posting & browsing club events and college-wide events (hackathons, workshops, fests).
+
+Personalized notifications based on joined clubs and general college events.
+
+A chatbot placeholder on login/signup page (to be trained later).
+
+🎯 Core Features
+
+Authentication
+
+Signup only with @srec.ac.in emails.
+
+Roles: Student, Faculty, Organizer.
+
+JWT-based secure login.
+
+Event Management
+
+Event data: title, description, date, time, venue, club, organizerName.
+
+Event types: Club-specific or College-wide.
+
+Only organizers/club admins can post events.
+
+Personalized Feed
+
+Upcoming events shown from followed clubs + college-wide events.
+
+Filters: club, type, date.
+
+Optional calendar view.
+
+Notifications
+
+Real-time event notifications.
+
+RSVP/“Going” option.
+
+Implemented with Socket.IO or Firebase Cloud Messaging.
+
+Chatbot (Future Integration)
+
+Placeholder chatbot on login/signup page.
+
+Later upgrade to answer FAQs, event details, club info.
+
+🛠️ Tech Stack (Free-Friendly)
+
+Frontend: React.js (Create React App) + Tailwind CSS
+
+Backend: Node.js + Express.js
+
+Database: MongoDB Atlas (free tier)
+
+Authentication: JWT
+
+Realtime: Socket.IO
+
+Hosting:
+
+Frontend → Vercel
+
+Backend → Render / Railway / Replit
+
+DB → MongoDB Atlas
+
+🗂️ Database Schema
+
+Users Collection
+
+{
+  "id": "user123",
+  "name": "John Doe",
+  "email": "john@srec.ac.in",
+  "password": "hashed_password",
+  "role": "Student",
+  "clubs": ["Coding Club", "Robotics Club"],
+  "notifications": [
+    { "eventId": "event456", "message": "Hackathon is happening soon!", "read": false }
+  ]
+}
+
+
+Events Collection
+
+{
+  "id": "event456",
+  "title": "Hackathon 2025",
+  "description": "24-hour coding challenge",
+  "date": "2025-10-15T09:00:00",
+  "venue": "Main Auditorium",
+  "club": "Coding Club",
+  "postedBy": "user123",
+  "type": "club"
+}
+
+🚀 Deliverables
+
+Functional backend (auth, events, notifications).
+
+Functional frontend (signup/login, event feed, notifications).
+
+Chatbot placeholder component.
+
+Deployment instructions for free hosting.
+
+✅ Instruction to Replit AI:
+Generate a starter codebase with:
+
+Backend folder → Express + MongoDB connection + JWT auth + Event/User models + Socket.IO setup.
+
+Frontend folder → React + Tailwind + signup/login forms + event feed page + chatbot placeholder.
+
+Include .env.example with MONGO_URI, JWT_SECRET, PORT.
+
+Add comments so it’s easy to extend later (RSVP, calendar, search).
